@@ -4,15 +4,15 @@ fun main() {
 
     //Each instance is independent. user and friend are two instances
     val user = User(firstName = "Alan", lastName = "Parker")
-    user.printFullName() //Prints John Mathew
+    user.printFullName() //Prints Alan Parker
 
     //Creating instance of User
     val friend = User(firstName = "James")
-    friend.printFullName() //Prints "Name is not assigned yet"
+    friend.printFullName() //Prints "James Sean"
 
     //Default constructor is called as all the params are supplied
     val cousin = User("John", "Mike", true)
-    cousin.printFullName()
+    cousin.printFullName() //Prints John Mike
 
 }
 
@@ -21,7 +21,8 @@ fun main() {
  * To access variables/functions of class requires it's object(instance)
  * A class can also be accessed from separate file in same package making the code more readable
  * @param firstName is mandatory one when calling User class whereas
- * @param lastName is optional and uses default value("smith") until passed from instance
+ * @param lastName is optional and uses default value("Sean") until passed from instance
+ * @param isPremiumUser is optional and uses default value(false) until passed from instance
  *
  * Respective constructors are called based upon params passed when creating object
  */
@@ -39,19 +40,16 @@ class User(var firstName: String,
         //Checking empty condition incl. blank spaces
         if (firstName.isNotBlank()) {
             println("$firstName $lastName")
-        } else {
-            println("Name is not assigned yet")
         }
-
         println("$firstName, premium holder: $isPremiumUser")
     }
 }
 
 /**
  * Note:
- * class User(var firstName: String, var lastName: String = "Smith")
+ * class User(var firstName: String, var lastName: String = "Sean")
  * is equivalent to
- * class User constructor(var firstName: String, var lastName: String = "Smith")
+ * class User constructor(var firstName: String, var lastName: String = "Sean")
  *
  * Constructor is simply initializes object for the class and has the same name as of class.
  * Read More: [https://beginnersbook.com/2013/03/constructors-in-java/]

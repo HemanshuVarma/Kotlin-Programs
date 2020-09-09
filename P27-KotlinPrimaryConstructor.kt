@@ -4,11 +4,11 @@ fun main() {
 
     //Each instance is independent. user and friend are two instances
     val user = User("Alan", "Parker")
-    user.printFullName() //Prints John Mathew
+    user.printFullName() //Prints "Alan Parker"
 
     //Creating instance of User
     val friend = User("James")
-    friend.printFullName() //Prints "Name is not assigned yet"
+    friend.printFullName() //Prints "James"
 
 }
 
@@ -17,7 +17,7 @@ fun main() {
  * To access variables/functions of class requires it's object(instance)
  * A class can also be accessed from separate file in same package making the code more readable
  * @param firstName is mandatory one when calling User class whereas
- * @param lastName is optional and uses default value("smith") until passed from instance
+ * @param lastName is optional and uses default value("Smith") until passed from instance
  */
 class User(var firstName: String,
            var lastName: String = "Smith") {
@@ -26,8 +26,6 @@ class User(var firstName: String,
         //Checking empty condition incl. blank spaces
         if (firstName.isNotBlank()) {
             println("$firstName $lastName")
-        } else {
-            println("Name is not assigned yet")
         }
     }
 }
