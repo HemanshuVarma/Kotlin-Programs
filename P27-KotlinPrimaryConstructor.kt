@@ -8,7 +8,7 @@ fun main() {
 
     //Creating instance of User
     val friend = User("James")
-    friend.printFullName() //Prints "James"
+    friend.printFullName() //Prints "James Smith"
 
 }
 
