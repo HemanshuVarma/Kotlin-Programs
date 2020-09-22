@@ -1,6 +1,6 @@
 //Execution starts from Main
 fun main() {
-    //Kotlin Protected Modifier for Variables
+    //Kotlin Protected Modifier for Methods
 
     //Instance of Chef class
     val chef = Chef("Ray", 30, "stew")
