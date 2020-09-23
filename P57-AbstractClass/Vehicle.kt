@@ -8,7 +8,7 @@
  *
  * Note: Abstract class cannot be initiated as they are incomplete
  */
-abstract class Vehicle(val color: Int, val numberOfWheels: Int) {
+abstract class Vehicle(val color: String, val numberOfWheels: Int) {
 
     //drive method is abstract, so it has be implemented.
     //Making it abstract because, a vehicle could have automatic or manual drive type which differs based on each vehicle.
