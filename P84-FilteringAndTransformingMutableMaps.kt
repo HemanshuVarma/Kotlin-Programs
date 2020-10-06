@@ -5,7 +5,7 @@ fun main() {
     //Mapping a variable in key value pair
     val statesMap = mutableMapOf(
             "DL" to "Delhi",
-            "AP" to "Uttar Pradesh", //Adding wrong info
+            "AP" to "Andhra Pradesh",
             "TS" to "Telangana",
             "MH" to "Maharashtra",
             "WB" to "West Bengal",
@@ -24,7 +24,7 @@ fun main() {
 
     //Filtering in map, includes key and value
     val result = statesMap.filter { it.value.contains("A", true) }
-    println(result) //Prints {AP=Uttar Pradesh, TS=Telangana, MH=Maharashtra, WB=West Bengal, UP=Uttar Pradesh}
+    println(result) //Prints {AP=Andhra Pradesh, TS=Telangana, MH=Maharashtra, WB=West Bengal, UP=Uttar Pradesh, TN=Tamil Nadu, KA=Karnataka, OD=Odisha}
 
     //Filtering with keys
     val result1 = statesMap.filterKeys { it.startsWith("T", true) }
@@ -38,9 +38,9 @@ fun main() {
 
     //Filtering with values
     val result4 = statesMap.filterValues { it.startsWith("T", true) }
-    println(result4)
+    println(result4) //Prints {TS=Telangana, TN=Tamil Nadu}
 
     //Filtering with keys and mapping values as the key itself
     val result5 = statesMap.filterKeys { it.startsWith("T", true) }.mapValues { it.key }
-    println(result5)
+    println(result5) //Prints {TS=TS, TN=TN}
 }
