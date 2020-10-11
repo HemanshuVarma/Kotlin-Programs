@@ -1,6 +1,6 @@
 //Execution starts from Main
 fun main() {
-    //Kotlin Type Hierarchy and Kotlin Type Checking with 'is'
+    //Casting in Kotlin
 
     //Any is used to specify it can accept any sort of data. All the classes/primitives extends ANY.
     //Read more [https://medium.com/@m.sandovalcalvo/kotlin-type-system-unveiling-the-mystery-50613f0db893]
