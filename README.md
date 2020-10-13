@@ -8,4 +8,6 @@ Access the 21 page Glossary Ebook here: [Free Download](https://kotlin-glossary-
 Course:     [The Kotlin Programming Language](https://caster.io/courses/kotlin-programming-language)  
 Instructor: [Donn Felker](https://caster.io/instructors/donn-felker)  
 Platform: [Caster.io](https://caster.io/)  
-Subscription type: **Free**
+Subscription type: **Free**     
+
+**Instantly run programs of this repo on [Kotlin Playground](play.kotlinlang.org)**
