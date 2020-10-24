@@ -10,4 +10,4 @@ Instructor: [Donn Felker](https://caster.io/instructors/donn-felker)
 Platform: [Caster.io](https://caster.io/)  
 Subscription type: **Free**     
 
-**Instantly run programs of this repo on [Kotlin Playground](play.kotlinlang.org)**
+**Instantly run programs of this repo on [Kotlin Playground](https://play.kotlinlang.org/)**
