@@ -13,22 +13,29 @@ fun main(vararg args: String) {
     while (!input.isNullOrEmpty()) {
         //Splitting input with a space
         val values = input.split(' ')
-        val lhs = values[0]
-        val operator = values[1]
-        val rhs = values[2]
 
-        //Performing operation based on operator
-        when (operator) {
-            "+" -> println(lhs.toDouble() + rhs.toDouble())
-            "-" -> println(lhs.toDouble() - rhs.toDouble())
-            "*" -> println(lhs.toDouble() * rhs.toDouble())
-            "/" -> println(lhs.toDouble() / rhs.toDouble())
-            else -> throw IllegalArgumentException("Unknown operator: $operator")
+        //Checking for single input, or expression without space
+        if (values.size < 3) {
+            println("Expecting formatted input: VALUE OPERATOR VALUE. Found: ${values[0]}")
+        } else {
+            val lhs = values[0].toDoubleOrNull() ?: throw IllegalArgumentException("Invalid input format ${values[0]}")
+            val operator = values[1]
+            val rhs = values[2].toDoubleOrNull() ?: throw  IllegalArgumentException("Invalid input format ${values[2]}")
+
+            //Performing operation based on operator
+            val result = when (operator) {
+                "+" -> lhs + rhs
+                "-" -> lhs - rhs
+                "*" -> lhs * rhs
+                "/" -> lhs / rhs
+                else -> throw IllegalArgumentException("Unknown operator: $operator")
+            }
+            println(result) //Prints result
         }
-
         //Continue taking input
         input = readLine()
     }
 
+    //Printing thanking message before exiting program
     println("GoodBye!")
 }
