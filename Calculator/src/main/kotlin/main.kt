@@ -39,3 +39,16 @@ fun main(vararg args: String) {
     //Printing thanking message before exiting program
     println("GoodBye!")
 }
+
+/**
+ * Instructions for generating a JAR file out of program in IntelliJ
+ *
+ * 1. Click on File -> Project Structure
+ * 2. Select Artifacts, click "+"(plus icon) for new artifact -> JAR -> From module with dependencies
+ * 3. Select Main or target class from Main Class input field
+ * 4. Press OK and Apply. With this, artifact setup is done and ready for building and exporting JAR
+ * 5. Now, from Build menu of IntelliJ, select generated artifact and click build(action).
+ * 6. This will generate <APP_NAME>.jar in output folder for project
+ * 7. To run, navigate to jar director in command line and run command - "java -jar <APP_NAME>.jar"
+ * 8. This will run your java application.
+ */
